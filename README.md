@@ -36,14 +36,9 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 ## Environment Variables
-### 📦 Environment Variables
-
-Copy the following into your `.env` file:
-
-<div style="position: relative; margin-top: 1em;">
-  <pre style="background: #000; border: 1px solid #d1d5da; border-radius: 6px; padding: 1em; overflow: auto;"><code id="env-vars">BETTER_AUTH_URL=http://localhost:3000
-BETTER_AUTH_SECRET=5JjX9cnRX7GymR3C1rTg9bTTTyGxinSc
-MONGO_URI=mongodb://localhost:27017/your-database</code></pre>
-  <button onclick="navigator.clipboard.writeText(document.getElementById('env-vars').innerText)" style="position: absolute; top: 8px; right: 8px; background-color: #28a745; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Copy</button>
-</div>
+<pre>
+1. BETTER_AUTH_URL=http://localhost:3000
+2. BETTER_AUTH_SECRET=5JjX9cnRX7GymR3C1rTg9bTTTyGxinSc
+3. MONGO_URI=mongodb://localhost:27017/your-database
+</pre>
 
