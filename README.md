@@ -35,10 +35,12 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-## Environment Variables
-<pre>
-1. BETTER_AUTH_URL=http://localhost:3000
-2. BETTER_AUTH_SECRET=5JjX9cnRX7GymR3C1rTg9bTTTyGxinSc
-3. MONGO_URI=mongodb://localhost:27017/your-database
-</pre>
+## 📦 Environment Variables
 
+Create a `.env` file and paste the following:
+
+```env
+# .env
+BETTER_AUTH_URL=http://localhost:3000
+BETTER_AUTH_SECRET=5JjX9cnRX7GymR3C1rTg9bTTTyGxinSc
+MONGO_URI=your-mongodb-url/your-database
