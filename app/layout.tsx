@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ThemeProviderWrapper from "@/components/ThemeProvider";
+import ProgressBar from "@/components/ProgressBarWrapper";
 
 
 export const metadata: Metadata = {
@@ -19,9 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body>
-        <ThemeProviderWrapper>
+       <ProgressBar>
+            <ThemeProviderWrapper>
             {children}
         </ThemeProviderWrapper>
+       </ProgressBar>
+    
       </body>
     </html>
   );

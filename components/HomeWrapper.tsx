@@ -1,3 +1,4 @@
+import Link from "next/link"
 import ThemeSwitcher from "./ThemeSwitcher"
 
 const Home = () =>{
@@ -5,6 +6,7 @@ const Home = () =>{
         <>
             <ThemeSwitcher/>
         <div>Hello from Cafe</div>
+        <Link href={"/login"}>Login</Link>
         </>
     )
 }

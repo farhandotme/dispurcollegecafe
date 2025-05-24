@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@bprogress/next": "^3.2.12",
     "@hookform/resolvers": "^5.0.1",
     "better-auth": "^1.2.8",
     "mongodb": "^6.16.0",
