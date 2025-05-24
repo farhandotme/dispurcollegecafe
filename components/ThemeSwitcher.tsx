@@ -17,7 +17,7 @@ const ThemeSwitcher = () => {
             aria-label="Toggle Dark Mode"
         className="theme-toggle-button"
         >
-            {resolvedTheme === "dark" ? <FiSun size={24} /> : <FiMoon />}
+            {resolvedTheme === "dark" ? <FiSun size={24} /> : <FiMoon size={24}/>}
         </button>
     );
 };
