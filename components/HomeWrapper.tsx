@@ -7,6 +7,8 @@ const Home = () =>{
             <ThemeSwitcher/>
         <div>Hello from Cafe</div>
         <Link href={"/login"}>Login</Link>
+        <br />
+        <Link href={"/signup"}>Signup</Link>
         </>
     )
 }

@@ -6,5 +6,5 @@ if(!connectionString){
 }
  const client = new MongoClient(connectionString);
  const db = client.db();   
- export default db
+ export  {db}
 
