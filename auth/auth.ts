@@ -10,6 +10,9 @@ export const auth = betterAuth({
     autoSignIn : true,
     sendResetPassword : async ({user, token, url})=>{
         // gonna setup later
+        console.log("User is", user);
+        console.log("Token is", token);
+        console.log("Url is", url);
     }
   },
   database: mongodbAdapter(db),

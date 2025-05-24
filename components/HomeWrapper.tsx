@@ -9,6 +9,8 @@ const Home = () =>{
         <Link href={"/login"}>Login</Link>
         <br />
         <Link href={"/signup"}>Signup</Link>
+        <br />
+        <Link href={"/login/forgotpassword"}>Forgot Password</Link>
         </>
     )
 }
