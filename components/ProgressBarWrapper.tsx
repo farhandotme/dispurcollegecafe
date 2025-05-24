@@ -20,7 +20,7 @@ const ProgressBar = ({children} : ProgressBarProp) =>{
    useEffect(()=>randomsetColor(getRandomColor()), [pathname]);
    if(!randomcolor) return null;
     return (
-        <ProgressProvider height="2px" color={randomcolor} shallowRouting={true} options={{showSpinner : false}}>
+        <ProgressProvider height="4px" color={randomcolor} shallowRouting options={{showSpinner : false}}>
           {children}
         </ProgressProvider>
     )
