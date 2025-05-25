@@ -11,7 +11,8 @@ const ConfirmEmailPage = ({ email }: { email: string }) => {
       toast.error(forgetPasswordapi.error.message)
     }
     else {
-      toast.success("Check your email for reset link")
+      toast.success("Check your email for reset link");
+      setTimeout(()=>toast.success("Also check your spam folder" , {autoClose : 3000}), 1000)
     }
   }
   return (
