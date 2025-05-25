@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true}>
       <body className={`${customFont.className} overflow-hidden`}>
        <ProgressBar>
-          <ToastContainer theme="dark"/>
+          <ToastContainer theme="dark" autoClose={2000}/>
             <ThemeProviderWrapper>
             {children}
         </ThemeProviderWrapper>
