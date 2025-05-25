@@ -64,5 +64,15 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-brew-cafe), sans-serif;
   }
+}
+.font-savane-light{
+  font-family: var(--font-lightitalic-savane), sans-serif;
+}
+.font-savane-bold{
+  font-family: var(--font-extrabold-savane), sans-serif;
+}
+.font-geist{
+  font-family: var(--font-geist-sans);
 }

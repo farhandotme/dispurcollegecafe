@@ -28,7 +28,7 @@ const ForgotPasswordPage = () => {
         }
     }
     return (
-        <main>
+        <main className="">
             {showResetPage ? <Resetpage email={email}/> : <form onSubmit={handleSubmit(handleForgotPassword)}>
                 <label htmlFor="email">Email</label>
                 <input {...register("email")}

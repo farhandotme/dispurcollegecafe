@@ -22,7 +22,7 @@ const LoginWrapper = () => {
         }
     }
     return (
-        <main className="h-screen overflow-hidden flex items-center justify-center">
+        <main className="h-screen overflow-hidden flex items-center justify-center font-geist">
             <div className="border border-white/20 md:w-96 w-[20rem] rounded-md">
                 <h1 className="text-2xl font-semibold text-center mt-2">Login to continue</h1>
                 <form onSubmit={handleSubmit(handleLogin)} className="p-5 flex flex-col rounded-md h-fit gap-y-3">

@@ -5,8 +5,8 @@ const Home = () =>{
     return (
         <>
             <ThemeSwitcher/>
-        <div>Hello from Cafe</div>
-        <Link href={"/login"}>Login</Link>
+        <div className="text-3xl font-bold">Hello from Cafe</div>
+        <Link href={"/login"} className="text-2xl">Login</Link>
         <br />
         <Link href={"/signup"}>Signup</Link>
         <br />
