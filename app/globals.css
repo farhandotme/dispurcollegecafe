@@ -5,6 +5,8 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
+    --black : #000;
+    --white : #fff;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -67,12 +69,8 @@
     font-family: var(--font-brew-cafe), sans-serif;
   }
 }
-.font-savane-light{
-  font-family: var(--font-lightitalic-savane), sans-serif;
-}
-.font-savane-bold{
-  font-family: var(--font-extrabold-savane), sans-serif;
-}
-.font-geist{
-  font-family: var(--font-geist-sans);
+
+::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
 }
