@@ -44,3 +44,5 @@ Create a `.env` file and paste the following:
 BETTER_AUTH_URL=http://localhost:3000
 BETTER_AUTH_SECRET=5JjX9cnRX7GymR3C1rTg9bTTTyGxinSc
 MONGO_URI=your-mongodb-url/your-database
+GMAIL_USERNAME=your-email-here
+GMAIL_PASSWORD=your-secret-id-here
