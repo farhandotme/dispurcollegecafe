@@ -21,7 +21,7 @@ export default {
 					tan: "#d2b48c",
 					orange: "#ff8a00",
 					mint: "#a3f7bf",
-					cream: "#fff8f0",
+					cream: "#fffce1",
 					bronze: "#CD7F32"
 				},
 				popover: {

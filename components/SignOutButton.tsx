@@ -13,9 +13,9 @@ const handleSignout = async () => {
         }
     )
 }
-const SignoutButton = () => {
+const SignoutButton = ({className} : {className? : string}) => {
     return (
-        <Button onClick={handleSignout}>Sign Out</Button>
+        <Button  className={className}  onClick={handleSignout}>Sign Out</Button>
     )
 }
 export default SignoutButton

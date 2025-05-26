@@ -6,9 +6,12 @@ import { Button } from "./ui/button";
 import loginUser from "@/actions/loginuser";
 import { toast, } from "react-toastify"
 import Link from "next/link";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+import { useRouter } from "next/navigation";
 const LoginWrapper = () => {
     const { register, handleSubmit, formState: { isSubmitting, errors } } =
         useForm<LoginUserProps>({ resolver: zodResolver(LoginUserSchema) });
+    const router : AppRouterInstance = useRouter();
     const handleLogin = async (data: LoginUserProps) => {
         const response = await loginUser(data);
         if (response?.error) {
@@ -19,6 +22,7 @@ const LoginWrapper = () => {
         }
         else if (response?.successMessage) {
             toast.success((response.successMessage))
+            router.push("/")
         }
     }
     return (
