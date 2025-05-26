@@ -69,7 +69,14 @@
     font-family: var(--font-brew-cafe), sans-serif;
   }
 }
-
+body,html{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+   overscroll-behavior: none;
+  touch-action: auto;
+}
 ::-webkit-scrollbar {
   display: none;
   scrollbar-width: none;
