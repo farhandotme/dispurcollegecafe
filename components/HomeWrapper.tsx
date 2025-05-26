@@ -46,7 +46,7 @@ export default function Home() {
   }, []);
   return (
     <>
-      <main className="relative bg-cafe-dark min-h-screen flex flex-col items-center justify-center text-center text-white px-4">
+      <main className="relative bg-cafe-dark h-[80vh] md:h-screen flex flex-col items-center justify-center text-center text-white px-4">
         <CoffeeScene beanSize={[1,1]} scale={0.1}/>
         <div className="text-5xl font-bold text-cafe-cream z-10 collider-target">Welcome to Beanzy Cafe</div>
         <p className="mt-4 text-xl text-cafe-cream/70 max-w-md z-10 collider-target">

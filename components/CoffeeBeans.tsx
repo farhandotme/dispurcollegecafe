@@ -16,14 +16,14 @@ type BeanData = {
   position: [number, number, number];
 };
 const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-const MAX_BEANS = isMobile ? 50 : 100;
-const BURST_HORIZONTAL_SPEED = 0.6; // X & Z axis – sideways splash
-const BURST_VERTICAL_SPEED = 0.8;   // Y axis – upward splash
+const MAX_BEANS = isMobile ? 20 : 100;
+const BURST_HORIZONTAL_SPEED = 0.3; // X & Z axis – sideways splash
+const BURST_VERTICAL_SPEED = 0.3;   // Y axis – upward splash
 const ON_MOBILE_SPAWN_TIME: number = 1500;
 const BOUNCE_INTENSITY = 16; // global bounce velocity, tweak this to adjust bounce height
 const ON_PC_SPAWN_TIME: number = 1200;
 const SPAWN_INTERVAL = isMobile ? ON_MOBILE_SPAWN_TIME : ON_PC_SPAWN_TIME;
-const BLAST_RATE: [radius: number, widthSegments: number, heightSegments: number] = [0.2, 16, 16];
+const BLAST_RATE: [radius: number, widthSegments: number, heightSegments: number] = [0.2, 4, 4];
 type BurstPiece = THREE.Mesh & {
   userData: {
     velocity: THREE.Vector3;
@@ -315,7 +315,7 @@ export default function CoffeeScene({ beanSize = [0.2, 0.2] , scale = 0.2}: Coff
 
   return (
     <>
-      <div className="w-full h-[100vh] fixed bottom-0 left-0 pointer-events-none z-0">
+      <div className="w-full h-screen fixed top-0 left-0 pointer-events-none z-0">
         <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
           <ambientLight />
           <directionalLight position={[2, 2, 2]} />
