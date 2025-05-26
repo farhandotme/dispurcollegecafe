@@ -6,24 +6,24 @@ import { Physics, useBox } from "@react-three/cannon";
 import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 import { MeshPhongMaterial } from "three";
-
 type CoffeeSceneProps = {
   beanSize?: [number, number];
+  scale?: number;   // NEW prop: overall scale for 3D model
 };
 
 type BeanData = {
   id: number;
   position: [number, number, number];
 };
-
-const MAX_BEANS = 50;
-const BURST_HORIZONTAL_SPEED = 0.3; // X & Z axis – sideways splash
-const BURST_VERTICAL_SPEED = 0.6;   // Y axis – upward splash
 const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+const MAX_BEANS = isMobile ? 50 : 100;
+const BURST_HORIZONTAL_SPEED = 0.6; // X & Z axis – sideways splash
+const BURST_VERTICAL_SPEED = 0.8;   // Y axis – upward splash
 const ON_MOBILE_SPAWN_TIME: number = 1500;
+const BOUNCE_INTENSITY = 16; // global bounce velocity, tweak this to adjust bounce height
 const ON_PC_SPAWN_TIME: number = 1200;
 const SPAWN_INTERVAL = isMobile ? ON_MOBILE_SPAWN_TIME : ON_PC_SPAWN_TIME;
-const BLAST_RATE: [radius: number, widthSegments: number, heightSegments: number] = [0.1, 8, 8];
+const BLAST_RATE: [radius: number, widthSegments: number, heightSegments: number] = [0.2, 16, 16];
 type BurstPiece = THREE.Mesh & {
   userData: {
     velocity: THREE.Vector3;
@@ -133,14 +133,15 @@ mesh.userData.velocity.y -= 0.01; // instead of 0.02
 type CoffeeBeanProps = {
   position: [number, number, number];
   size: [number, number];
+  scale? : number,
   onRemove: () => void;
   burstOnRemove?: boolean;
   addBurst: (pos: THREE.Vector3, obj: THREE.Object3D) => void;
 };
-
 function CoffeeBean({
   position,
   size,
+  scale,
   onRemove,
   burstOnRemove = true,
   addBurst,
@@ -152,10 +153,21 @@ function CoffeeBean({
     "model3d/textures/Coffee_DM_01_01_occlusion.png",
   ]);
 
-  const [ref] = useBox(() => ({
+  const bounceCount = useRef(0);
+  const bounceVelocity = useRef(BOUNCE_INTENSITY);
+
+  const [ref, api] = useBox(() => ({
     mass: 1,
     position,
     args: [size[0], size[1], size[0]],
+    onCollide: () => {
+      if (bounceCount.current < 3) {
+        // Apply upward velocity for bounce
+        api.velocity.set(0, bounceVelocity.current, 0);
+        bounceCount.current += 1;
+        bounceVelocity.current *= 0.5; // reduce bounce height by half each bounce
+      }
+    },
   }));
 
   // Clone scene once for this bean, and replace materials with new ones
@@ -206,10 +218,8 @@ function CoffeeBean({
     };
   }, [cloned]);
 
-  return <primitive object={cloned} ref={ref} scale={0.2} />;
+  return <primitive object={cloned} ref={ref} scale={scale} />;
 }
-
-
 
 function Ground() {
   const { viewport } = useThree();
@@ -277,7 +287,7 @@ function BurstGroup({ addBurstRef }: BurstGroupProps) {
   return <group ref={groupRef} />;
 }
 
-export default function CoffeeScene({ beanSize = [0.2, 0.2] }: CoffeeSceneProps) {
+export default function CoffeeScene({ beanSize = [0.2, 0.2] , scale = 0.2}: CoffeeSceneProps) {
   const [beans, setBeans] = useState<BeanData[]>([]);
   const idRef = useRef(0);
 
@@ -316,6 +326,7 @@ export default function CoffeeScene({ beanSize = [0.2, 0.2] }: CoffeeSceneProps)
                   key={id}
                   position={position}
                   size={beanSize}
+                  scale={scale}
                   onRemove={() => handleRemove(id)}
                   addBurst={(pos, obj) => {
                     addBurstRef.current?.(pos, obj);
