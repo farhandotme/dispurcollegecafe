@@ -17,13 +17,13 @@ type BeanData = {
 };
 const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 const MAX_BEANS = isMobile ? 20 : 100;
-const BURST_HORIZONTAL_SPEED = 0.3; // X & Z axis – sideways splash
-const BURST_VERTICAL_SPEED = 0.3;   // Y axis – upward splash
+const BURST_HORIZONTAL_SPEED = 0.1; // X & Z axis – sideways splash
+const BURST_VERTICAL_SPEED = 0.1;   // Y axis – upward splash
 const ON_MOBILE_SPAWN_TIME: number = 1500;
 const BOUNCE_INTENSITY = 16; // global bounce velocity, tweak this to adjust bounce height
 const ON_PC_SPAWN_TIME: number = 1200;
 const SPAWN_INTERVAL = isMobile ? ON_MOBILE_SPAWN_TIME : ON_PC_SPAWN_TIME;
-const BLAST_RATE: [radius: number, widthSegments: number, heightSegments: number] = [0.2, 4, 4];
+const BLAST_RATE: [radius: number, widthSegments: number, heightSegments: number] = [0.1, 8, 8];
 type BurstPiece = THREE.Mesh & {
   userData: {
     velocity: THREE.Vector3;

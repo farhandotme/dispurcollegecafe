@@ -68,6 +68,7 @@ export default {
 				"neue-regular": 'var(--font-neue-regular)',
 				'neue-bold': 'var(--font-neue-bold)',
 				"geist": 'var(--font-geist-sans)',
+				"cookie-regular" : `var(--font-cookie-regular)`
 			},
 		}
 	},
