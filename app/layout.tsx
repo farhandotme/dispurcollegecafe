@@ -5,9 +5,7 @@ import localFont from "next/font/local"
 import { GeistSans } from "geist/font/sans"
 import NavBar from "@/components/NavBar";
 import LenisProvider from "@/components/LenisProvider";
-import Footer from "@/components/Footer";
 import MouseCircle from "@/components/MouseHover";
-import CoffeeScene from "@/components/CoffeeBeans";
 const NeueMontrealRegular = localFont({
   src: [
     {
@@ -65,7 +63,11 @@ export default function RootLayout({
         <ProgressBar>
           <LenisProvider>
             <ToastContainer theme="dark" autoClose={2000} />
-            <MouseCircle/>
+            <MouseCircle className="fixed hidden md:block -top-6 -left-6 z-[9999] w-12 h-12 
+    rounded-full border border-white
+    mix-blend-difference pointer-events-none
+    bg-white
+    -translate-x-1/2 -translate-y-1/2"/>
             <NavBar />
             {children}
           </LenisProvider>

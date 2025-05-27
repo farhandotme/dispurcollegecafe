@@ -25,29 +25,42 @@ const HeroContent = () => {
 
     tl.from(divWrapperRef.current, {
       opacity: 0,
-      scale: 0.95,
+      scale: 0.8,
       duration: 0.6,
       ease: "power2.out",
+      scrollTrigger : {
+          trigger : divWrapperRef.current,
+          scrub : true,
+        },
     })
       .from(imageWrapperRef.current, {
         opacity: 0,
         x: 50,
         y: 20,
-        duration: 1,
+        duration : 0.5,
+        scrollTrigger : {
+          trigger : imageWrapperRef.current,
+          scrub : true,
+        },
         ease: "power3.out",
-      }, "-=0.4")
+      })
       .from(textRef.current, {
         opacity: 0,
         x: -30,
-        duration: 0.8,
+        duration:  0.5,
         ease: "power3.out",
-      }, "-=0.6")
+      })
       .from(buttonRef.current, {
         opacity: 0,
         scale: 0.9,
         duration: 0.6,
+        scrollTrigger : {
+          trigger : buttonRef.current,
+          scrub : true,
+     
+        },
         ease: "back.out(1.7)",
-      }, "-=0.5");
+      });
   }, []);
 
   return (
@@ -69,7 +82,7 @@ const HeroContent = () => {
       <div className="flex flex-col gap-y-6 text-center md:text-left">
         <h1
           ref={textRef}
-          className="text-cafe-bronze ml-3 font-cookie-regular text-3xl md:text-6xl text-brown-800 leading-tight hover:scale-105 transition-transform duration-300"
+          className="text-cafe-bronze ml-3 hover-scale font-cookie-regular text-3xl md:text-6xl text-brown-800 leading-tight hover:scale-105 transition-transform duration-300"
         >
           Brewed with love — You’ve got to try it!
         </h1>
@@ -81,7 +94,10 @@ const HeroContent = () => {
         </p>
 
         <div ref={buttonRef}>
-          <button className="px-6 py-3 text-cafe-dark bg-brown-700 hover:bg-brown-800 transition rounded-full text-sm md:text-base font-semibold">
+          <button className="px-6 py-3 
+          text-cafe-dark bg-brown-700 hover:bg-brown-800 
+          transition rounded-full text-sm md:text-base 
+          font-semibold">
             Explore Our Menu
           </button>
         </div>

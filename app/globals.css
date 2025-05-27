@@ -81,3 +81,14 @@ body,html{
   display: none;
   scrollbar-width: none;
 }
+/* styles/globals.css */
+.hover-letter {
+  display: inline-block;
+  transition: transform 0.8s ease;
+}
+
+.hover-letter:hover {
+  transform: scale(1.8);
+  color: inherit;
+}
+

@@ -1,6 +1,6 @@
 const Footer = () =>{
     return (
-        <footer className="bg-cafe-tan text-cafe-light py-8 px-4 rounded-md">
+        <footer className="bg-cafe-tan text-cafe-light py-2 md:py-8 px-4 rounded-md">
   <div className="max-w-7xl mx-auto flex flex-col justify-between items-center gap-6">
     {/* Brand Info */}
     <div className="text-center">
@@ -16,7 +16,7 @@ const Footer = () =>{
   </div>
 
   {/* Bottom note */}
-  <div className="text-center text-xs text-cafe-cream/60 mt-2">
+  <div className="text-center text-sm text-cafe-cream/60 mt-2">
     © {new Date().getFullYear()} Beanzy Cafe. All rights reserved.
   </div>
 </footer>

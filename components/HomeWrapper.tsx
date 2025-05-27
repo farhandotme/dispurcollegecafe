@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 import { useSession } from "@/auth/auth-client";
 import CoffeeScene from "./CoffeeBeans";
 import Footer from "./Footer";
-import Image from "next/image";
 import HeroContent from "./HeroContent";
 
 interface ClientUserProps {
@@ -57,12 +56,13 @@ export default function Home() {
       <main className="relative bg-cafe-dark min-h-[100dvh] flex flex-col items-center justify-center
       text-center text-white px-1 md:px-4 overflow-hidden">
         {/* Animated text */}
+
         <div className="text-5xl font-bold  text-cafe-cream z-10 collider-target flex flex-col gap-2 mt-20">
           {["Welcome", "to", "Beanzy Cafe"].map((item, index) => (
-            <div 
+            <div
               key={index}
               ref={
-                (el) =>{if(el) wordRefs.current[index] = el!}
+                (el) => { if (el) wordRefs.current[index] = el! }
               }
               className="overflow-hidden"
             >
@@ -74,24 +74,29 @@ export default function Home() {
           Where Aroma Meets Ambience.
         </p>
 
-        <div className="mt-6 flex gap-4 z-10">
-          <button className="bg-cafe-cream text-cafe-dark  md:text-lg  text-sm px-4 py-4 md:px-6 md:py-2 rounded-lg 
-          shadow hover:scale-105 transition collider-target">
-            Explore Menu
-          </button>
-          <button className="border border-cafe-cream  md:text-lg text-sm px-4 py-4 md:px-6 md:py-2
-           text-cafe-cream  rounded-lg active:bg-cafe-cream active:text-cafe-dark hover:bg-cafe-cream hover:text-cafe-dark transition collider-target">
-            Reserve a Table
-          </button>
-        </div>
+      <div className="mt-6 flex gap-4 z-10">
+  <button className="bg-cafe-cream text-cafe-dark md:text-lg text-sm px-4 py-4 md:px-6 md:py-2 rounded-lg 
+    shadow hover:scale-105 transition collider-target">
+    Explore Our Menu
+  </button>
+  <button className="border border-cafe-cream md:text-lg text-sm px-4 py-4 md:px-6 md:py-2
+    text-cafe-cream rounded-lg active:bg-cafe-cream active:text-cafe-dark
+    hover:bg-cafe-cream hover:text-cafe-dark transition collider-target">
+    Order Now
+  </button>
+</div>
         <div>
-          <p className= "text-3xl md:text-4xl text-center mt-3 font-cookie-regular text-cafe-tan">
-            Beanzy Cafe is a creative project by Mafijur Ali and Farhan Hussian, developed for Dispur College — a vibrant digital concept blending aroma, ambience, and innovation
+          <p className="text-3xl md:text-4xl text-center mt-5 font-cookie-regular
+           text-cafe-tan">
+            Beanzy isn’t just coffee — it’s a mood.
+            We roast with fire, pour with flair, and serve with soul.
+            For rebels, dreamers, and caffeine chasers.
+            Come for the brew, stay for the bold vibe
           </p>
-        </div> 
-        <HeroContent/>
+        </div>
+        <HeroContent />
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 }

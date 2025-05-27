@@ -1,29 +1,30 @@
 "use client";
 
 import { useEffect } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue} from "framer-motion";
 import gsap from "gsap";
-
-export default function MouseCircle() {
+declare type MouseHoverProp = {
+  className : string
+}
+export default function MouseCircle({className} : MouseHoverProp) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-
-  const springX = useSpring(x, { stiffness: 500, damping: 30 });
-  const springY = useSpring(y, { stiffness: 500, damping: 30 });
 
   useEffect(() => {
     const circle = document.getElementById("mouse-circle");
 
     const handleMouseMove = (e: MouseEvent) => {
-      x.set(e.clientX - 20);
-      y.set(e.clientY - 20);
+      x.set(e.clientX);
+      y.set(e.clientY);
+
     };
 
     const handleTouchMove = (e: TouchEvent) => {
       const touch = e.touches[0];
       if (touch) {
-        x.set(touch.clientX - 20);
-        y.set(touch.clientY - 20);
+        x.set(touch.clientX);
+        y.set(touch.clientY);
+
       }
     };
 
@@ -63,10 +64,8 @@ export default function MouseCircle() {
   return (
     <motion.div
       id="mouse-circle"
-      style={{ translateX: springX, translateY: springY }}
-      className="fixed top-0 left-0 z-[9999] w-10 h-10 
-        bg-transparent border-2 border-[#4B2E23] rounded-full 
-        pointer-events-none"
+      style={{ x, y }}
+      className={className}
     />
   );
 }
