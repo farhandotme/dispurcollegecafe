@@ -175,10 +175,12 @@ function CoffeeBean({
     const clonedScene = scene.clone(true);
     clonedScene.traverse((child) => {
       if (child instanceof THREE.Mesh) {
-        child.material = new MeshPhongMaterial({
+        child.material = new THREE.MeshStandardMaterial({
           map: diffuse,
           aoMap,
-          specularMap,
+          metalnessMap : specularMap,
+          roughness : 1,
+          metalness : .6,
           aoMapIntensity: 1,
         });
       }

@@ -7,6 +7,7 @@ import { useSession } from "@/auth/auth-client";
 import CoffeeScene from "./CoffeeBeans";
 import Footer from "./Footer";
 import Image from "next/image";
+import HeroContent from "./HeroContent";
 
 interface ClientUserProps {
   user: {
@@ -53,8 +54,9 @@ export default function Home() {
 
   return (
     <>
-      <main className="relative bg-cafe-dark min-h-[100dvh] flex flex-col items-center justify-center text-center text-white px-4 overflow-hidden">
-        {/* <CoffeeScene beanSize={[1, 1]} scale={0.1} /> */}
+      <main className="relative bg-cafe-dark min-h-[100dvh] flex flex-col items-center justify-center 
+      text-center text-white px-1 md:px-4 overflow-hidden">
+        <CoffeeScene beanSize={[1, 1]} scale={0.1} />
         {/* Animated text */}
         <div className="text-5xl font-bold  text-cafe-cream z-10 collider-target flex flex-col gap-2 mt-20">
           {["Welcome", "to", "Beanzy Cafe"].map((item, index) => (
@@ -89,11 +91,7 @@ export default function Home() {
             Beanzy Cafe is a creative project by Mafijur Ali and Farhan Hussian, developed for Dispur College — a vibrant digital concept blending aroma, ambience, and innovation
           </p>
         </div> 
-        <div className="w-full mt-3 grid grid-cols-2 justify-between items-center">
-        <Image className="rounded-md h-full w-full"  src={"/Images/but-first-coffee-sign-coffee-shop-aesthetic-jpg-z66v95kks3r1vtm3.jpg"}
-         height={400} width={400} alt="coffee-sign" quality={100}/>
-         <span className="font-cookie-regular text-3xl">Its good you should try</span>
-    </div>
+        <HeroContent/>
       </main>
       <Footer/>
     </>
