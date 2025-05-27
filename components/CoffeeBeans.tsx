@@ -5,7 +5,6 @@ import { OrbitControls, useGLTF, useTexture } from "@react-three/drei";
 import { Physics, useBox } from "@react-three/cannon";
 import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
-import { MeshPhongMaterial } from "three";
 type CoffeeSceneProps = {
   beanSize?: [number, number];
   scale?: number;   // NEW prop: overall scale for 3D model
@@ -179,8 +178,8 @@ function CoffeeBean({
           map: diffuse,
           aoMap,
           metalnessMap : specularMap,
-          roughness : 1,
-          metalness : .6,
+          roughness : 0,
+          metalness : 0,
           aoMapIntensity: 1,
         });
       }

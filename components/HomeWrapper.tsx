@@ -54,9 +54,8 @@ export default function Home() {
 
   return (
     <>
-      <main className="relative bg-cafe-dark min-h-[100dvh] flex flex-col items-center justify-center 
+      <main className="relative bg-cafe-dark min-h-[100dvh] flex flex-col items-center justify-center
       text-center text-white px-1 md:px-4 overflow-hidden">
-        <CoffeeScene beanSize={[1, 1]} scale={0.1} />
         {/* Animated text */}
         <div className="text-5xl font-bold  text-cafe-cream z-10 collider-target flex flex-col gap-2 mt-20">
           {["Welcome", "to", "Beanzy Cafe"].map((item, index) => (
@@ -71,7 +70,6 @@ export default function Home() {
             </div>
           ))}
         </div>
-
         <p className="mt-4 text-xl text-cafe-cream/70 max-w-md z-10 collider-target">
           Where Aroma Meets Ambience.
         </p>

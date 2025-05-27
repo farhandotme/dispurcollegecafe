@@ -1,11 +1,11 @@
 const Footer = () =>{
     return (
         <footer className="bg-cafe-tan text-cafe-light py-8 px-4 rounded-md">
-  <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+  <div className="max-w-7xl mx-auto flex flex-col justify-between items-center gap-6">
     {/* Brand Info */}
-    <div className="text-center md:text-left">
-      <h2 className="text-2xl font-neue-regular">Beanzy Cafe</h2>
-      <p className="text-lg font-cookie-regular text-cafe-cream/70 mt-2">
+    <div className="text-center">
+      <h2 className="text-4xl font-cookie-regular">Beanzy Cafe</h2>
+      <p className="text-2xl font-cookie-regular text-cafe-cream/70 mt-2">
         Crafted with passion by Mafijur Ali & Farhan Hussian for Dispur College.
       </p>
     </div>
