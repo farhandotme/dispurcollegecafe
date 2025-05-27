@@ -27,8 +27,6 @@ export default function RandomBlurOverlay({
     if (!wrapper) return;
 
     const children = Array.from(wrapper.querySelectorAll<HTMLElement>("*"));
-    const blurClass = "random-blur-active";
-
     const applyRandomBlur = () => {
       const targets = children.sort(() => 0.5 - Math.random()).slice(0, maxTargets);
 
