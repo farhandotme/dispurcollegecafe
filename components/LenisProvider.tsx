@@ -22,10 +22,10 @@ const LenisProvider = ({ children }: { children: ReactNode }) => {
 
   return <ReactLenis 
   options={{
-    duration: 1.6,
+    duration: 3,
     touchMultiplier: 3, // Try 1.5–3 for more responsiveness on touch
     syncTouch : true,
-    syncTouchLerp : 2,
+    syncTouchLerp : 5,
     gestureOrientation : "vertical",
     autoResize: true,   // Ensures Lenis recalculates on screen resize/orientation change
   }}

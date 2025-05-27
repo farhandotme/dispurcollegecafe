@@ -91,4 +91,7 @@ body,html{
   transform: scale(1.8);
   color: inherit;
 }
-
+body.mouse-hover-active .hover-scale,
+body.mouse-hover-active .hover-scale * {
+  color: #C1B7A4 !important; /* your text-cafe-light color */
+}

@@ -4,10 +4,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { useEffect, useRef, useState } from "react";
 import { useSession } from "@/auth/auth-client";
-import CoffeeScene from "./CoffeeBeans";
 import Footer from "./Footer";
 import HeroContent from "./HeroContent";
-
+import NavBar from "./NavBar";
 interface ClientUserProps {
   user: {
     id: string;
@@ -53,6 +52,7 @@ export default function Home() {
 
   return (
     <>
+     <NavBar/>
       <main className="relative bg-cafe-dark min-h-[100dvh] flex flex-col items-center justify-center
       text-center text-white px-1 md:px-4 overflow-hidden">
         {/* Animated text */}
