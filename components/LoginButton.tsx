@@ -4,7 +4,7 @@ const LoginButton = () => {
     return (
         <div>
             <Link href={"/login"}>
-              <Button className="bg-cafe-tan px-6 md:px-10 md:py-2 hover:bg-cafe-tan">
+              <Button className="bg-cafe-tan px-6 md:px-10 md:py-3 hover:bg-cafe-tan">
                 Login</Button>
             
             </Link>
