@@ -116,7 +116,7 @@ const HeroContent = () => {
           className="font-neue-bold md:text-3xl text-gray-700 text-xl"
         >
           Every cup at Beanzy is handcrafted to warm your soul. Whether you&apos;re
-          craving a strong espresso or a silky latte, we've got something special
+          craving a strong espresso or a silky latte, we&apos;ve got something special
           brewing for you.
         </p>
       </div>
