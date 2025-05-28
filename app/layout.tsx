@@ -63,9 +63,9 @@ export default function RootLayout({
         <ProgressBar>
           <LenisProvider>
             <ToastContainer theme="dark" autoClose={2000} />
-            <RandomBlurOverlay maxBlur={2} blurDuration={0.4} maxTargets={4}>
-              <MouseCircle className="fixed hidden md:block -top-8 -left-9 z-[9999] w-20 h-20 bg-gradient-to-tr
-             from-cafe-tan/10 via-cafe-cream/20 to-cafe-light/20
+            <RandomBlurOverlay maxBlur={1} blurDuration={0.4} maxTargets={2}>
+              <MouseCircle className="fixed hidden md:block -top-8 -left-7 z-[9999] w-16 h-16 bg-gradient-to-tr
+             from-cafe-tan/10 via-cafe-cream/10 to-cafe-light/10
            rounded-full border border-white/50
              backdrop-blur-[2px] pointer-events-none
              -translate-x-1/2 -translate-y-1/2"/>

@@ -22,7 +22,17 @@ export default {
 					orange: "#ff8a00",
 					mint: "#a3f7bf",
 					cream: "#fffce1",
-					bronze: "#CD7F32"
+					bronze: "#CD7F32",
+
+					deepGreen: "#355e3b",      // Rich forest green
+					softPink: "#f7c6c7",       // Gentle pink contrast
+					burntSienna: "#e97451",    // Warm, earthy red-orange
+					slateGray: "#708090",      // Muted gray-blue
+					warmGray: "#a89f91",       // Cozy, neutral gray
+					sand: "#f4c97b",           // Muted gold sand tone
+					olive: "#808000",          // Earthy green for natural vibe
+					blush: "#f9c5bd",          // Light blush pink for softness
+					espresso: "#362c2a",       // Deep brown-black
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -68,7 +78,7 @@ export default {
 				"neue-regular": 'var(--font-neue-regular)',
 				'neue-bold': 'var(--font-neue-bold)',
 				"geist": 'var(--font-geist-sans)',
-				"cookie-regular" : `var(--font-cookie-regular)`
+				"cookie-regular": `var(--font-cookie-regular)`
 			},
 		}
 	},

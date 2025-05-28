@@ -4,7 +4,10 @@ const LoginButton = () => {
     return (
         <div>
             <Link href={"/login"}>
-              <Button className="bg-cafe-tan px-6 md:px-10 md:py-3 hover:bg-cafe-tan">
+              <Button className="font-cookie-regular bg-cafe-tan
+               px-6 md:px-10 md:py-3
+               text-cafe-cream
+                hover:bg-cafe-tan text-xl md:text-3xl">
                 Login</Button>
             
             </Link>

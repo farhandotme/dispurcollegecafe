@@ -7,6 +7,8 @@ import { useSession } from "@/auth/auth-client";
 import Footer from "./Footer";
 import HeroContent from "./HeroContent";
 import NavBar from "./NavBar";
+import LoginButton from "./LoginButton";
+import CoffeeScene from "./CoffeeBeans";
 interface ClientUserProps {
   user: {
     id: string;
@@ -49,14 +51,12 @@ export default function Home() {
       ease: "power2.out",
     });
   }, []);
-
   return (
     <>
      <NavBar/>
       <main className="relative bg-cafe-dark min-h-[100dvh] flex flex-col items-center justify-center
       text-center text-white px-1 md:px-4 overflow-hidden">
         {/* Animated text */}
-
         <div className="text-5xl font-bold  text-cafe-cream z-10 collider-target flex flex-col gap-2 mt-20">
           {["Welcome", "to", "Beanzy Cafe"].map((item, index) => (
             <div

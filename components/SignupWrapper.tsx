@@ -22,25 +22,31 @@ else if(response?.errorMessage){
 }
 }
 return (
-    <main className="h-screen overflow-hidden flex items-center justify-center">
-        <div className="border border-white/20 md:w-96 w-[20rem] rounded-md">
-            <h1 className="text-2xl font-semibold text-center mt-2">Signup to continue</h1>
+    <main className="h-screen overflow-hidden flex items-center justify-center bg-cafe-cream font-cookie-regular">
+        <div className="border border-white/20 md:w-96 w-[20rem] rounded-md bg-cafe-tan">
+            <h1 className="text-4xl  text-cafe-dark  font-semibold text-center mt-2">Signup to continue</h1>
             <form onSubmit={handleSubmit(handleSignup)} className="p-5 flex flex-col rounded-md h-fit gap-y-3">
-             <label htmlFor="username">Username</label>
+             <label htmlFor="username" className="text-3xl">Username</label>
             <input {...register("username")}
-             type="text" id="username" className="border border-white/10 outline-none rounded-md p-1 px-3 bg-transparent" 
+             type="text" id="username" className="border text-lg
+                         placeholder:text-black font-geist placeholder:font-cookie-regular placeholder:text-xl
+                          border-white/10 outline-none rounded-md p-1 px-3 bg-transparent" 
             placeholder="Username goes here"/>
             {errors.username && <span className="text-red-600">Username must contain min 4 and max 12 characters</span>}
-             <label htmlFor="email">Email</label>
+             <label htmlFor="email" className="text-3xl">Email</label>
             <input {...register("email")}
-             type="text" id="email" className="border border-white/10 outline-none rounded-md p-1 px-3 bg-transparent" 
+             type="text" id="email" className="border text-lg
+                         placeholder:text-black font-geist placeholder:font-cookie-regular placeholder:text-xl
+                          border-white/10 outline-none rounded-md p-1 px-3 bg-transparent" 
             placeholder="abc@example.com"/>
             {errors.email && <span className="text-red-600">Enter a valid email</span>}
-            <label htmlFor="password">Password</label>
-            <input className="border border-white/10 outline-none rounded-md p-1 px-3 bg-transparent"  
+            <label htmlFor="password" className="text-3xl">Password</label>
+            <input className="border text-lg
+                         placeholder:text-black font-geist placeholder:font-cookie-regular placeholder:text-xl
+                          border-white/10 outline-none rounded-md p-1 px-3 bg-transparent"  
             type="password" {...register("password", {minLength : 8 , maxLength : 20})} id="password"/>
             {errors.password && <span className="text-red-600">Password must contain min 8 and max 20 characters</span> }
-            <Button>{isSubmitting ? "Logging you in" : "Login"}</Button>
+            <Button className="bg-cafe-light hover:bg-cafe-light text-2xl text-black">{isSubmitting ? "Signing you in" : "Signup"}</Button>
             </form>
         </div>
     </main>
