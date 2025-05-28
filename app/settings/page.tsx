@@ -20,7 +20,7 @@ const SettingsPage = () => {
    try {
      await updatePassword(userId, data);
     toast.success("Password updated successfully!");
-  } catch (err : unknown) {
+  } catch (_) {
     toast.error("Something went wrong. Please try again.");
   }
   };

@@ -36,7 +36,7 @@ const ProfilePage = () => {
     <>
       <div className="flex items-center gap-x-2">
         <div className="bg-cafe-dark md:px-6 py-2 px-3
-         rounded-md font-cookie-regular text-xl font-bold
+         rounded-md font-cookie-regular text-xl
          md:text-2xl">
           <span>Welcome</span>
           <span className="ml-1">{username}</span>
