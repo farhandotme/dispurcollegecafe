@@ -7,7 +7,7 @@ const handleSignout = async () => {
         {
             fetchOptions: {
                 onSuccess: () => {
-                    toast.success("Sign out uccessfull", { autoClose: 1000 })
+                    toast.success("Sign out successfull", { autoClose: 1000})
                 }
             }
         }

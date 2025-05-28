@@ -2,6 +2,7 @@
 import { auth } from "@/auth/auth";
 import SignpUserSchema from "@/validators/SignupUser";
 import { APIError } from "better-auth/api";
+import { headers } from "next/headers";
 const signup = async (data : unknown) =>{
 const parsed =  SignpUserSchema.safeParse(data);
 if(!parsed.success){
@@ -18,7 +19,8 @@ const signupuser = await auth.api.signUpEmail({
         password : password,
         name : username,
         callbackURL : "/"
-    }
+    },
+    headers : await headers()
 })  
 if(signupuser){
     return {

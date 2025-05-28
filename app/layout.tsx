@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import localFont from "next/font/local"
 import { GeistSans } from "geist/font/sans"
 import LenisProvider from "@/components/LenisProvider";
+import SignoutButton from "@/components/SignOutButton";
 const NeueMontrealRegular = localFont({
   src: [
     {
