@@ -14,8 +14,8 @@ const SignupWrapper = () => {
         console.log(data);
         const response = await signup(data);
         if (response?.success_message) {
-            toast.success(response.success_message as string);
-            router.push("/")
+            toast.success(response.success_message as string, {autoClose : 1000});
+            setTimeout(()=>router.push("/"), 1500)
         }
         else if (response?.errorMessage) {
             toast.error(response.errorMessage as string);

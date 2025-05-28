@@ -45,8 +45,6 @@ body,html{
   margin: 0;
   background-color: #000;
   padding: 0;
-   overscroll-behavior: none;
-  touch-action: auto;
 }
 ::-webkit-scrollbar {
   display: none;
