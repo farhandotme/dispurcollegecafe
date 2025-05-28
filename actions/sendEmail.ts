@@ -16,9 +16,9 @@ interface sendEmailProps {
 }
 const sendEmail = async ({ to, text, subject }: sendEmailProps) => {
   await transporter.sendMail({
-    from: `"Brew Cafe Support" <${process.env.GMAIL_USERNAME}>`,
-    to: to,
-    subject: subject,
+    from: `"Beanzy Cafe Support" <${process.env.GMAIL_USERNAME}>`,
+    to,
+    subject,
     html: `
  <html>
   <body style="margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #2c1e1b; color: #fef6e4;">
@@ -40,7 +40,7 @@ const sendEmail = async ({ to, text, subject }: sendEmailProps) => {
         text-shadow: 0 0 5px #c97a40;
         margin-bottom: 30px;
       ">
-        ☕ Brew Café Password Reset
+        ☕ Beanzy Café Password Reset
       </h2>
 
       <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">

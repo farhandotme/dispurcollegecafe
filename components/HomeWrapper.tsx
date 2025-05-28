@@ -44,13 +44,9 @@ export default function Home() {
       <div className="mt-6 flex gap-4 z-10">
   <button className="bg-cafe-cream text-cafe-dark md:text-lg text-sm px-4 py-4 md:px-6 md:py-2 rounded-lg 
     shadow hover:scale-105 transition collider-target">
-    Explore Our Menu
+    Explore Our Products
   </button>
-  <button className="border border-cafe-cream md:text-lg text-sm px-4 py-4 md:px-6 md:py-2
-    text-cafe-cream rounded-lg active:bg-cafe-cream active:text-cafe-dark
-    hover:bg-cafe-cream hover:text-cafe-dark transition collider-target">
-    Order Now
-  </button>
+
 </div>
         <div>
           <p className="text-3xl md:text-4xl text-center mt-5 font-cookie-regular

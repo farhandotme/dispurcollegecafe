@@ -108,14 +108,14 @@ const HeroContent = () => {
           ref={textRef}
           className="text-cafe-bronze ml-6 font-cookie-regular text-3xl md:text-6xl text-brown-800 leading-tight"
         >
-          Brewed with love — You’ve got to try it!
+          Brewed with love — You&apos;ve got to try it!
         </h1>
 
         <p
           ref={paragraphRef}
           className="font-neue-bold md:text-3xl text-gray-700 text-xl"
         >
-          Every cup at Beanzy is handcrafted to warm your soul. Whether you're
+          Every cup at Beanzy is handcrafted to warm your soul. Whether you&apos;re
           craving a strong espresso or a silky latte, we've got something special
           brewing for you.
         </p>
@@ -126,7 +126,7 @@ const HeroContent = () => {
         ref={extraTextRef}
         className="text-black font-neue-bold md:text-3xl text-xl"
       >
-        Beanzy isn’t just about beans — it’s a full-blown flavor fest packed with creamy delights and savory surprises.
+        Beanzy isn&apos;t just about beans — it&apos;s a full-blown flavor fest packed with creamy delights and savory surprises.
       </div>
 
       {/* Right Image */}
