@@ -24,5 +24,6 @@ export const auth = betterAuth({
   },
   database: mongodbAdapter(db),
   
-  plugins : [nextCookies()]
+  plugins : [nextCookies()],
+  trustedOrigins : ["http://192.168.78.38:3000"]
 });

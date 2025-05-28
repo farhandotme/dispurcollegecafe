@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
      <NavBar/>
-      <main className="relative bg-cafe-dark min-h-[100dvh] flex flex-col items-center justify-center font-brew
+      <main className="relative bg-cafe-dark min-h-dvh flex flex-col items-center justify-center font-brew
       text-center text-white px-1 md:px-4 overflow-hidden">
         {/* Animated text */}
         <div className="text-5xl font-bold  text-cafe-cream z-10 collider-target flex flex-col gap-2 mt-20">

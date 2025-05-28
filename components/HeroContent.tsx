@@ -26,7 +26,6 @@ const HeroContent = () => {
               start: "top 85%",
               end: "bottom 60%",
               scrub: 0.3,
-              // markers: true, // debug
             },
           });
 
@@ -88,7 +87,8 @@ const HeroContent = () => {
   return (
     <div
       ref={divWrapperRef}
-      className="w-full mt-3 grid grid-cols-1 md:grid-cols-2 gap-6 items-center px-4 md:px-12 py-8 bg-[#fffaf0] rounded-xl shadow-md"
+      className="w-full mt-3 grid grid-cols-1 md:grid-cols-2 gap-6 items-center px-4 md:px-12 py-8
+      bg-[#fffaf0] rounded-xl shadow-md"
     >
       {/* Left Image */}
       <div ref={imageWrapperRef} className="overflow-hidden rounded-lg">

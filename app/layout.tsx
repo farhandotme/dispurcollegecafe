@@ -4,7 +4,7 @@ import { ToastContainer } from "react-toastify";
 import localFont from "next/font/local"
 import { GeistSans } from "geist/font/sans"
 import LenisProvider from "@/components/LenisProvider";
-import MouseCircle from "@/components/MouseHover";
+import SignoutButton from "@/components/SignOutButton";
 const NeueMontrealRegular = localFont({
   src: [
     {
@@ -61,12 +61,7 @@ export default function RootLayout({
       <body>
         <ProgressBar>
           <LenisProvider>
-            <ToastContainer theme="dark" autoClose={2000} />
-              <MouseCircle className="fixed hidden md:block -top-8 -left-7 z-[9999] w-16 h-16 bg-gradient-to-tr
-             from-cafe-tan/10 via-cafe-cream/10 to-cafe-light/10
-           rounded-full border border-white/50
-             backdrop-blur-[2px] pointer-events-none 
-             -translate-x-1/2 -translate-y-1/2"/>
+            <ToastContainer theme="dark" autoClose={2000}/>
               {children}          
           </LenisProvider>
         </ProgressBar>
