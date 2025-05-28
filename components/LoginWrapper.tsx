@@ -8,6 +8,7 @@ import { toast, } from "react-toastify"
 import Link from "next/link";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import { useRouter } from "next/navigation";
+import GoogleLogin from "./GoogleLogin";
 const LoginWrapper = () => {
     const { register, handleSubmit, formState: { isSubmitting, errors } } =
         useForm<LoginUserProps>({ resolver: zodResolver(LoginUserSchema) });
@@ -38,10 +39,14 @@ const LoginWrapper = () => {
                         placeholder="abc@example.com" />
                     {errors.email && <span className="text-red-600 text-sm font-geist">Enter a valid email</span>}
                     <label htmlFor="password" className="text-3xl" >Password</label>
-                    <input className="border text-lg
+                    <input className="border 
                          placeholder:text-black font-geist
                           border-white/10 outline-none rounded-md p-1 px-3 bg-transparent"
-                        type="password" {...register("password", { minLength: 8, maxLength: 20 })} id="password" />
+                        type="password" placeholder="Password goes here..." {...register("password", { minLength: 8, maxLength: 20 })} id="password" />
+                    <div>
+                        <div className="text-3xl text-center">or</div>
+                        <GoogleLogin />
+                    </div>
                     <div className="flex justify-center text-sm">
                         <Link href={"/login/forgotpassword"}>
                             <span className="hover:underline cursor-pointer text-xl">Forgot password?</span>
