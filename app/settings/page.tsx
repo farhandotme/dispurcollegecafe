@@ -30,7 +30,7 @@ const SettingsPage = () => {
         {/* Header */}
         <div className="text-center">
           <h1 className="text-5xl md:text-6xl border-b border-white/10 pb-4">
-            {isPending ? "Loading..." : `Hi, ${user}`}
+            {!isPending && (user && `Hi, ${user}`)}
           </h1>
           <p className="text-cafe-cream/60 mt-2 text-4xl">Manage your account below.</p>
         </div>
