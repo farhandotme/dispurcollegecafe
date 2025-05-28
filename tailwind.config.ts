@@ -23,7 +23,6 @@ export default {
 					mint: "#a3f7bf",
 					cream: "#fffce1",
 					bronze: "#CD7F32",
-
 					deepGreen: "#355e3b",      // Rich forest green
 					softPink: "#f7c6c7",       // Gentle pink contrast
 					burntSienna: "#e97451",    // Warm, earthy red-orange
@@ -78,7 +77,8 @@ export default {
 				"neue-regular": 'var(--font-neue-regular)',
 				'neue-bold': 'var(--font-neue-bold)',
 				"geist": 'var(--font-geist-sans)',
-				"cookie-regular": `var(--font-cookie-regular)`
+				"cookie-regular": `var(--font-cookie-regular)`,
+				"brew" : "var(--font-brew-cafe)"
 			},
 		}
 	},

@@ -12,6 +12,7 @@
     "@bprogress/next": "^3.2.12",
     "@gsap/react": "^2.1.2",
     "@hookform/resolvers": "^5.0.1",
+    "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-slot": "^1.2.3",
     "@react-three/cannon": "^6.6.0",
     "@react-three/drei": "^10.0.8",

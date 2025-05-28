@@ -2,46 +2,13 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { useEffect, useRef, useState } from "react";
-import { useSession } from "@/auth/auth-client";
+import { useRef} from "react";
 import Footer from "./Footer";
 import HeroContent from "./HeroContent";
 import NavBar from "./NavBar";
-import LoginButton from "./LoginButton";
-import CoffeeScene from "./CoffeeBeans";
-interface ClientUserProps {
-  user: {
-    id: string;
-    name: string;
-    email: string;
-    emailVerified: boolean;
-    createdAt: Date;
-    updatedAt: Date;
-    image?: string | null | undefined;
-  } | undefined;
-}
-
 gsap.registerPlugin(ScrollTrigger);
-
 export default function Home() {
-  const { data: session } = useSession();
-  const [userData, setUserData] = useState<ClientUserProps["user"] | undefined>(session?.user);
-  const [user, setUser] = useState<string | undefined>();
-
-  // Refs for each word div
   const wordRefs = useRef<HTMLDivElement[]>([]);
-
-  useEffect(() => {
-    if (session?.user?.name) {
-      setUser(session.user.name);
-      setUserData(session.user);
-    } else {
-      setUser(undefined);
-      setUserData(undefined);
-    }
-  }, [session]);
-
-  // GSAP animation for wordRefs
   useGSAP(() => {
     gsap.from(wordRefs.current, {
       opacity: 0,
@@ -54,7 +21,7 @@ export default function Home() {
   return (
     <>
      <NavBar/>
-      <main className="relative bg-cafe-dark min-h-[100dvh] flex flex-col items-center justify-center
+      <main className="relative bg-cafe-dark min-h-[100dvh] flex flex-col items-center justify-center font-brew
       text-center text-white px-1 md:px-4 overflow-hidden">
         {/* Animated text */}
         <div className="text-5xl font-bold  text-cafe-cream z-10 collider-target flex flex-col gap-2 mt-20">

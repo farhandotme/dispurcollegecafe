@@ -1,5 +1,4 @@
 "use client";
-
 import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF, useTexture } from "@react-three/drei";
 import { Physics, useBox } from "@react-three/cannon";
