@@ -25,7 +25,7 @@ const SettingsPage = () => {
   }
   };
   return (
-    <div className="bg-cafe-dark min-h-dvh text-cafe-light font-cookie-regular py-12 px-4">
+    <div className="bg-cafe-dark  text-cafe-light font-cookie-regular py-12 px-4">
       <div className="max-w-2xl mx-auto space-y-12">
         {/* Header */}
         <div className="text-center">
@@ -60,7 +60,6 @@ const SettingsPage = () => {
              <div className="text-4xl text-center">Click here to sign out </div>
              <SignoutButton className="w-full text-black font-bold hover:bg-cafe-tan text-2xl bg-cafe-tan"/>
         </div>
-
         {/* Danger Zone */}
         <div className="rounded-xl bg-red-900/20 backdrop-blur-sm border border-red-500/30 shadow-md p-6 font-neue-regular">
           <h2 className="text-2xl text-red-400 mb-3">Danger Zone</h2>
